@@ -1,10 +1,10 @@
-package com.ozymandias;
+package com.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OzymandiasApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {

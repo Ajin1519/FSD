@@ -8,10 +8,10 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ozymandias</groupId>
-	<artifactId>ozymandias</artifactId>
+	<groupId>com.server</groupId>
+	<artifactId>server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ozymandias</name>
+	<name>server</name>
 	<description>dynamic integration testing suite server</description>
 	<properties>
 		<java.version>17</java.version>
