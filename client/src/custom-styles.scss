@@ -1,0 +1,35 @@
+// Import Bootstrap's core files
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Define your custom colors
+$navbar-bg-color: #123456;
+$navbar-text-color: #abcdef;
+
+// Add custom colors to Bootstrap's theme colors
+$theme-colors: (
+  "custom-bg": $navbar-bg-color,
+  "custom-text": $navbar-text-color
+);
+
+// Import the rest of Bootstrap's components
+@import "~bootstrap/scss/bootstrap";
+
+// Create custom utility classes
+.navbar-bg-color {
+  background-color: $navbar-bg-color !important;
+}
+
+.navbar-text-color {
+  color: $navbar-text-color !important;
+}
+
+.custom-nav-link {
+    color: #333; 
+    &.active {
+      color: #abcdef; 
+      background-color: #123456; 
+    }
+  }
+  

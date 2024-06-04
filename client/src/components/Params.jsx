@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Header = ({headers,updateHeader}) => {
-  const [data, setData] = useState([
-    { id: 1, key: '', value:'' }
-  ]);
-
+const Params = ({params,updateParams}) => {
+  const [data, setData] = useState(params.params);
+  useEffect(()=>{
+    setData(params.params);
+  },[params.params])
   const handleInputChange = (id, field, value) => {
     const newData = data.map(row => {
       if (row.id === id) {
@@ -13,6 +13,7 @@ const Header = ({headers,updateHeader}) => {
       return row;
     });
     setData(newData);
+    updateParams(newData);
   };
 
   const handleAddRow = () => {
@@ -22,7 +23,7 @@ const Header = ({headers,updateHeader}) => {
 
   return (
     <div className="container mt-5">
-      <h3 className='font-weight-light'>Headers</h3>
+      <h3 className='font-weight-light'>Quick Param</h3>
       <button className="btn btn-primary mb-3" onClick={handleAddRow}>Add Row</button>
       <table className="table table-bordered table-hover">
         <thead className="thead-light">
@@ -46,7 +47,7 @@ const Header = ({headers,updateHeader}) => {
               </td>
               <td>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   value={row.value}
                   onChange={(e) => handleInputChange(row.id, 'value', e.target.value)}
@@ -60,4 +61,4 @@ const Header = ({headers,updateHeader}) => {
   );
 };
 
-export default Header;
+export default Params;
