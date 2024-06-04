@@ -7,7 +7,7 @@ const MainContent = () => {
       title: "Tab 1",
       content: {
         url: "",
-        httpmethod: "GET",
+        httpMethod: "GET",
         response: "",
         body: {},
         params: [{ id: 1, key: "", value: "" }],
@@ -18,7 +18,7 @@ const MainContent = () => {
       title: "Tab 2",
       content: {
         url: "",
-        httpmethod: "GET",
+        httpMethod: "GET",
         response: "",
         body: {},
         params: [{ id: 1, key: "", value: "" }],
@@ -35,7 +35,7 @@ const MainContent = () => {
         title: `Tab ${tabs.length + 1}`,
         content: {
           url: "",
-          httpmethod: "GET",
+          httpMethod: "GET",
           response: "",
           body: {},
           params: [{ id: 1, key: "", value: "" }],

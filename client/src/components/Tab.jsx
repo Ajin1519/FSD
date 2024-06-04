@@ -38,7 +38,7 @@ const Tab = ({ tabIndex, tabData, updateTabData }) => {
   }
 
   const handleSelect = (option) => {
-    const newData = {...tabData,httpmethod:option}
+    const newData = {...tabData,httpMethod:option}
     setInputValue(newData);
     updateTabData(tabIndex, newData);
   };
@@ -86,7 +86,7 @@ const Tab = ({ tabIndex, tabData, updateTabData }) => {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            {inputValue.httpmethod}
+            {inputValue.httpMethod}
           </button>
           <div className="dropdown-menu">
             <button className="dropdown-item" onClick={() => handleSelect('GET')}>GET</button>

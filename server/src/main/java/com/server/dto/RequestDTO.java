@@ -1,19 +1,22 @@
 package com.server.dto;
 
+import java.util.List;
 import java.util.Map;
+
 
 public class RequestDTO {
     private String url;
     private String httpMethod;
     private String response;
     private Object body;
-    private Map<String, String> headers;
+    private List<Object> headers;
     
-    public RequestDTO(String url, String httpMethod, String response,Object body) {
+    public RequestDTO(String url, String httpMethod, String response,Object body,List<Object> headers) {
         this.url = url;
         this.httpMethod = httpMethod;
         this.response = response;
         this.body = body;
+        this.headers = headers;
     }
     public String getUrl() {
         return url;
@@ -39,10 +42,11 @@ public class RequestDTO {
     public void setBody(Object body) {
         this.body = body;
     }
-    public Map<String, String> getHeaders() {
+    public List<Object> getHeaders() {
         return headers;
     }
-    public void setHeaders(Map<String, String> headers) {
+    public void setHeaders(List<Object> headers) {
         this.headers = headers;
     }
+    
 }

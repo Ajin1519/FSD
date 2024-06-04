@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Header = ({headers,updateHeader}) => {
-  const [data, setData] = useState([
-    { id: 1, key: '', value:'' }
-  ]);
+const Header = ({headers,updateHeaders}) => {
+  const [data,setData] = useState(headers.headers);
+  useEffect(()=>{
+    setData(headers.headers);
+  },[headers.headers])
 
   const handleInputChange = (id, field, value) => {
     const newData = data.map(row => {
@@ -13,6 +14,7 @@ const Header = ({headers,updateHeader}) => {
       return row;
     });
     setData(newData);
+    updateHeaders(newData);
   };
 
   const handleAddRow = () => {
@@ -46,7 +48,7 @@ const Header = ({headers,updateHeader}) => {
               </td>
               <td>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   value={row.value}
                   onChange={(e) => handleInputChange(row.id, 'value', e.target.value)}
