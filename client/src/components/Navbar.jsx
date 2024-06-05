@@ -29,6 +29,8 @@ const Navbar = () => {
           <li className="nav-item active">
             <Link className="nav-link" to="/">Home</Link>
           </li>
+        </ul>
+        <ul className="navbar-nav ml-auto">
           {user ? (
             <>
               <li className="nav-item">

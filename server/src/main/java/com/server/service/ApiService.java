@@ -21,14 +21,6 @@ public class ApiService {
     this.webClientBuilder = webClientBuilder;
   }
 
-  // public Mono<String> getDataFromExternalApi() {
-  // String url = "http://www.boredapi.com/api/activity/";
-  // return webClientBuilder.build()
-  // .get()
-  // .uri(url)
-  // .retrieve()
-  // .bodyToMono(String.class);
-  // }
   public Mono<String> callApi(RequestDTO requestDTO) {
     HttpMethod httpMethod = HttpMethod.GET;
     if (requestDTO.getHttpMethod().equals("POST")) {
